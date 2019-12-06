@@ -1,0 +1,399 @@
+{
+	"name": "Patchwork (G0040)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Patchwork, ATT&CK group G0040 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1119",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork developed a file stealer to search C:\\ and collect files with certain extensions. Patchwork also executed a script to enumerate all drives, store them as a list, and upload generated files to the C2 server.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1009",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork apparently altered NDiskMonitor samples by adding four bytes of random letters in a likely attempt to change the file hashes.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork bypassed User Access Control (UAC).[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork bypassed User Access Control (UAC).[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork ran a reverse shell with Meterpreter.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork dumped the login data database from \\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork used Base64 to encode C2 traffic.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork encrypted the collected files' path with AES and then encoded them with base64.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork collected and exfiltrated files from the infected system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork copied all targeted files to a directory called index that was eventually uploaded to the C&amp;C server.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork .dll that contains BADNEWS is loaded and executed using DLL side-loading.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork has used watering holes to deliver files with exploits to initial victims.[2][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1173",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork leveraged the DDE protocol to deliver their malware.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork uses malicious documents to deliver remote execution exploits as part of. The group has previously exploited CVE-2017-8570, CVE-2012-1856, CVE-2014-4114, CVE-2017-0199, and CVE-2015-1641.[1][5][2][6][3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork payload has searched all fixed drives on the victim for files matching a specified list of extensions.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork removed certain files and replaced them so they could not be retrieved.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1066",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork apparently altered NDiskMonitor samples by adding four bytes of random letters in a likely attempt to change the file hashes.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork installed its payload in the startup programs folder as \"Baidu Software Update.\" The group also adds its second stage payload to the startup programs as \"Net Monitor.\"[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork payload deletes Resiliency Registry keys created by Microsoft Office applications in an apparent effort to trick users into thinking there were no issues during application runs.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork has obfuscated a script with Crypto Obfuscator.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork used PowerSploit to download payloads, run a reverse shell, and execute malware on the victim's machine.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1093",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork payload uses process hollowing to hide the UAC bypass vulnerability exploitation inside svchost.exe.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork has added the path of its second-stage malware to the startup folder to achieve persistence. One of its file stealers has also persisted by adding a Registry Run key.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork attempted to use RDP to move laterally.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork payloads download additional files from the C2 server.[5][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork payloads download additional files from the C2 server.[5][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork file stealer can run a TaskScheduler DLL to add persistence.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork file stealer can run a TaskScheduler DLL to add persistence.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork file stealer can run a TaskScheduler DLL to add persistence.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork used Visual Basic Scripts (VBS), JavaScript code, batch files, and .SCT files on victim machines.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork used Visual Basic Scripts (VBS), JavaScript code, batch files, and .SCT files on victim machines.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1063",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork scanned the \"Program Files\" directories for a directory with the string \"Total Security\" (the installation path of the \"360 Total Security\" antivirus tool).[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1045",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Patchwork payload was packed with UPX.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork has used spearphishing with an attachment to deliver files with exploits to initial victims.[1][5][3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1192",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork has used spearphishing with links to deliver files with exploits to initial victims. The group has used embedded image tags (known as web bugs) with unique, per-recipient tracking links in their emails for the purpose of identifying which recipients opened messages.[2][3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork collected the victim computer name, OS version, and architecture type and sent the information to its C2 server. Patchwork also enumerated all available drives on the victim's machine.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork collected the victim username and whether it was running as admin, then sent the information to its C2 server.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork embedded a malicious macro in a Word document and lured the victim to click on an icon to execute the malware.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork hides base64-encoded and encrypted C2 server locations in comments on legitimate websites.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Patchwork hides base64-encoded and encrypted C2 server locations in comments on legitimate websites.[5]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Patchwork"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

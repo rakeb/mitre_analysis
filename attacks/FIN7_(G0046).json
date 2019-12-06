@@ -1,0 +1,318 @@
+{
+	"name": "FIN7 (G0046)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by FIN7, ATT&CK group G0046 v1.3",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1138",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used application shim databases for persistence.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1138",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used application shim databases for persistence.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1116",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has signed Carbanak payloads with legally purchased code signing certificates. FIN7 has also digitally signed their phishing documents, backdoors and other staging tools to bypass security controls.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used cmd.exe to launch commands on the victim’s machine.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used ports 53, 80, 443, and 8080 for C2.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1173",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 spear phishing campaigns have included malicious Word documents with DDE execution.[8]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has created a scheduled task named \"AdobeFlashSync\" to establish persistence.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1170",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used mshta.exe to execute VBScript to execute malicious code on victim systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1170",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used mshta.exe to execute VBScript to execute malicious code on victim systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 created new Windows services and added them to the startup directories for persistence.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 created new Windows services and added them to the startup directories for persistence.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has used fragmented strings, environment variables, standard input (stdin), and native character-replacement functionalities to obfuscate commands.[10][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 uses a PowerShell script to launch shellcode that retrieves an additional payload.[2][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 malware has created Registry Run and RunOnce keys to establish persistence, and has also added items to the Startup folder.[2][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has downloaded additional malware to execute on the victim's machine, including by using a PowerShell script to launch shellcode that retrieves an additional payload.[2][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has downloaded additional malware to execute on the victim's machine, including by using a PowerShell script to launch shellcode that retrieves an additional payload.[2][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 malware has created scheduled tasks to establish persistence.[2][6][4][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 malware has created scheduled tasks to establish persistence.[2][6][4][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 malware has created scheduled tasks to establish persistence.[2][6][4][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1113",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 captured screenshots and desktop video recordings.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used SQL, VBS and JavaScript scripts to help perform tasks on the victim's machine.[4][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used SQL, VBS and JavaScript scripts to help perform tasks on the victim's machine.[4][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1023",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 created several .LNK files on the victim's machine.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 sent spearphishing emails with either malicious Microsoft Documents or RTF files attached.[2][5][9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 has performed C2 using DNS via A, OPT, and TXT records.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 lured victims to double-click on images in the attachments they sent which would then execute the hidden LNK file.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1125",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 created a custom video recording capability that could be used to monitor operations in the victim's environment.[4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1497",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used images embedded into document lures that only activate the payload when a user double clicks to avoid sandboxes.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1497",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used images embedded into document lures that only activate the payload when a user double clicks to avoid sandboxes.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used legitimate services like Google Docs, Google Scripts, and Pastebin for C2.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "FIN7 used legitimate services like Google Docs, Google Scripts, and Pastebin for C2.[4]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by FIN7"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

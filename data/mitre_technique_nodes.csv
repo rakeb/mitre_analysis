@@ -1,0 +1,320 @@
+﻿Id,Label,Category,Description
+1,T1189,Initial Access,Drive-by Compromise
+2,T1190,Initial Access,Exploit Public-Facing Application
+3,T1133,Initial Access,External Remote Services
+4,T1200,Initial Access,Hardware Additions
+5,T1091,Initial Access,Replication Through Removable Media
+6,T1193,Initial Access,Spearphishing Attachment
+7,T1192,Initial Access,Spearphishing Link
+8,T1194,Initial Access,Spearphishing via Service
+9,T1195,Initial Access,Supply Chain Compromise
+10,T1199,Initial Access,Trusted Relationship
+11,T1078,Initial Access,Valid Accounts
+12,T1155,Execution,AppleScript
+13,T1191,Execution,CMSTP
+14,T1059,Execution,Command-Line Interface
+15,T1223,Execution,Compiled HTML File
+16,T1196,Execution,Control Panel Items
+17,T1173,Execution,Dynamic Data Exchange
+18,T1106,Execution,Execution through API
+19,T1129,Execution,Execution through Module Load
+20,T1203,Execution,Exploitation for Client Execution
+21,T1061,Execution,Graphical User Interface
+22,T1118,Execution,InstallUtil
+23,T1152,Execution,Launchctl
+24,T1168,Execution,Local Job Scheduling
+25,T1177,Execution,LSASS Driver
+26,T1170,Execution,Mshta
+27,T1086,Execution,PowerShell
+28,T1121,Execution,Regsvcs/Regasm
+29,T1117,Execution,Regsvr32
+30,T1085,Execution,Rundll32
+31,T1053,Execution,Scheduled Task
+32,T1064,Execution,Scripting
+33,T1035,Execution,Service Execution
+34,T1218,Execution,Signed Binary Proxy Execution
+35,T1216,Execution,Signed Script Proxy Execution
+36,T1153,Execution,Source
+37,T1151,Execution,Space after Filename
+38,T1072,Execution,Third-party Software
+39,T1154,Execution,Trap
+40,T1127,Execution,Trusted Developer Utilities
+41,T1204,Execution,User Execution
+42,T1047,Execution,Windows Management Instrumentation
+43,T1028,Execution,Windows Remote Management
+44,T1220,Execution,XSL Script Processing
+45,T1156,Persistence,.bash_profile and .bashrc
+46,T1015,Persistence,Accessibility Features
+47,T1098,Persistence,Account Manipulation
+48,T1182,Persistence,AppCert DLLs
+49,T1103,Persistence,AppInit DLLs
+50,T1138,Persistence,Application Shimming
+51,T1131,Persistence,Authentication Package
+52,T1197,Persistence,BITS Jobs
+53,T1067,Persistence,Bootkit
+54,T1176,Persistence,Browser Extensions
+55,T1042,Persistence,Change Default File Association
+56,T1109,Persistence,Component Firmware
+57,T1122,Persistence,Component Object Model Hijacking
+58,T1136,Persistence,Create Account
+59,T1038,Persistence,DLL Search Order Hijacking
+60,T1157,Persistence,Dylib Hijacking
+61,T1133,Persistence,External Remote Services
+62,T1044,Persistence,File System Permissions Weakness
+63,T1158,Persistence,Hidden Files and Directories
+64,T1179,Persistence,Hooking
+65,T1062,Persistence,Hypervisor
+66,T1183,Persistence,Image File Execution Options Injection
+67,T1215,Persistence,Kernel Modules and Extensions
+68,T1159,Persistence,Launch Agent
+69,T1160,Persistence,Launch Daemon
+70,T1152,Persistence,Launchctl
+71,T1161,Persistence,LC_LOAD_DYLIB Addition
+72,T1168,Persistence,Local Job Scheduling
+73,T1162,Persistence,Login Item
+74,T1037,Persistence,Logon Scripts
+75,T1177,Persistence,LSASS Driver
+76,T1031,Persistence,Modify Existing Service
+77,T1128,Persistence,Netsh Helper DLL
+78,T1050,Persistence,New Service
+79,T1137,Persistence,Office Application Startup
+80,T1034,Persistence,Path Interception
+81,T1150,Persistence,Plist Modification
+82,T1205,Persistence,Port Knocking
+83,T1013,Persistence,Port Monitors
+84,T1163,Persistence,Rc.common
+85,T1164,Persistence,Re-opened Applications
+86,T1108,Persistence,Redundant Access
+87,T1060,Persistence,Registry Run Keys / Startup Folder
+88,T1053,Persistence,Scheduled Task
+89,T1180,Persistence,Screensaver
+90,T1101,Persistence,Security Support Provider
+91,T1058,Persistence,Service Registry Permissions Weakness
+92,T1166,Persistence,Setuid and Setgid
+93,T1023,Persistence,Shortcut Modification
+94,T1198,Persistence,SIP and Trust Provider Hijacking
+95,T1165,Persistence,Startup Items
+96,T1019,Persistence,System Firmware
+97,T1501,Persistence,Systemd Service
+98,T1209,Persistence,Time Providers
+99,T1154,Persistence,Trap
+100,T1078,Persistence,Valid Accounts
+101,T1100,Persistence,Web Shell
+102,T1084,Persistence,Windows Management Instrumentation Event Subscription
+103,T1004,Persistence,Winlogon Helper DLL
+103,T1504,Persistence,PowerShell Profile
+104,T1134,Privilege Escalation,Access Token Manipulation
+105,T1015,Privilege Escalation,Accessibility Features
+106,T1182,Privilege Escalation,AppCert DLLs
+107,T1103,Privilege Escalation,AppInit DLLs
+108,T1138,Privilege Escalation,Application Shimming
+109,T1088,Privilege Escalation,Bypass User Account Control
+110,T1038,Privilege Escalation,DLL Search Order Hijacking
+111,T1157,Privilege Escalation,Dylib Hijacking
+112,T1068,Privilege Escalation,Exploitation for Privilege Escalation
+113,T1181,Privilege Escalation,Extra Window Memory Injection
+114,T1044,Privilege Escalation,File System Permissions Weakness
+115,T1179,Privilege Escalation,Hooking
+116,T1183,Privilege Escalation,Image File Execution Options Injection
+117,T1160,Privilege Escalation,Launch Daemon
+118,T1050,Privilege Escalation,New Service
+119,T1034,Privilege Escalation,Path Interception
+120,T1150,Privilege Escalation,Plist Modification
+121,T1013,Privilege Escalation,Port Monitors
+122,T1055,Privilege Escalation,Process Injection
+123,T1053,Privilege Escalation,Scheduled Task
+124,T1058,Privilege Escalation,Service Registry Permissions Weakness
+125,T1166,Privilege Escalation,Setuid and Setgid
+126,T1178,Privilege Escalation,SID-History Injection
+127,T1165,Privilege Escalation,Startup Items
+128,T1169,Privilege Escalation,Sudo
+129,T1206,Privilege Escalation,Sudo Caching
+130,T1078,Privilege Escalation,Valid Accounts
+131,T1100,Privilege Escalation,Web Shell
+132,T1134,Defense Evasion,Access Token Manipulation
+133,T1009,Defense Evasion,Binary Padding
+134,T1197,Defense Evasion,BITS Jobs
+135,T1088,Defense Evasion,Bypass User Account Control
+136,T1146,Defense Evasion,Clear Command History
+137,T1191,Defense Evasion,CMSTP
+138,T1116,Defense Evasion,Code Signing
+139,T1500,Defense Evasion,Compile After Delivery
+140,T1223,Defense Evasion,Compiled HTML File
+141,T1109,Defense Evasion,Component Firmware
+142,T1122,Defense Evasion,Component Object Model Hijacking
+143,T1196,Defense Evasion,Control Panel Items
+144,T1207,Defense Evasion,DCShadow
+145,T1140,Defense Evasion,Deobfuscate/Decode Files or Information
+146,T1089,Defense Evasion,Disabling Security Tools
+147,T1038,Defense Evasion,DLL Search Order Hijacking
+148,T1073,Defense Evasion,DLL Side-Loading
+149,T1480,Defense Evasion,Execution Guardrails
+150,T1211,Defense Evasion,Exploitation for Defense Evasion
+151,T1181,Defense Evasion,Extra Window Memory Injection
+152,T1107,Defense Evasion,File Deletion
+153,T1222,Defense Evasion,File Permissions Modification
+154,T1006,Defense Evasion,File System Logical Offsets
+155,T1144,Defense Evasion,Gatekeeper Bypass
+156,T1484,Defense Evasion,Group Policy Modification
+157,T1158,Defense Evasion,Hidden Files and Directories
+158,T1147,Defense Evasion,Hidden Users
+159,T1143,Defense Evasion,Hidden Window
+160,T1148,Defense Evasion,HISTCONTROL
+161,T1183,Defense Evasion,Image File Execution Options Injection
+162,T1054,Defense Evasion,Indicator Blocking
+163,T1066,Defense Evasion,Indicator Removal from Tools
+164,T1070,Defense Evasion,Indicator Removal on Host
+165,T1202,Defense Evasion,Indirect Command Execution
+166,T1130,Defense Evasion,Install Root Certificate
+167,T1118,Defense Evasion,InstallUtil
+168,T1152,Defense Evasion,Launchctl
+169,T1149,Defense Evasion,LC_MAIN Hijacking
+170,T1036,Defense Evasion,Masquerading
+171,T1112,Defense Evasion,Modify Registry
+172,T1170,Defense Evasion,Mshta
+173,T1126,Defense Evasion,Network Share Connection Removal
+174,T1096,Defense Evasion,NTFS File Attributes
+175,T1027,Defense Evasion,Obfuscated Files or Information
+176,T1150,Defense Evasion,Plist Modification
+177,T1205,Defense Evasion,Port Knocking
+178,T1186,Defense Evasion,Process Doppelgänging
+179,T1093,Defense Evasion,Process Hollowing
+180,T1055,Defense Evasion,Process Injection
+181,T1108,Defense Evasion,Redundant Access
+182,T1121,Defense Evasion,Regsvcs/Regasm
+183,T1117,Defense Evasion,Regsvr32
+184,T1014,Defense Evasion,Rootkit
+185,T1085,Defense Evasion,Rundll32
+186,T1064,Defense Evasion,Scripting
+187,T1218,Defense Evasion,Signed Binary Proxy Execution
+188,T1216,Defense Evasion,Signed Script Proxy Execution
+189,T1198,Defense Evasion,SIP and Trust Provider Hijacking
+190,T1045,Defense Evasion,Software Packing
+191,T1151,Defense Evasion,Space after Filename
+192,T1221,Defense Evasion,Template Injection
+193,T1099,Defense Evasion,Timestomp
+194,T1127,Defense Evasion,Trusted Developer Utilities
+195,T1078,Defense Evasion,Valid Accounts
+196,T1497,Defense Evasion,Virtualization/Sandbox Evasion
+197,T1102,Defense Evasion,Web Service
+198,T1220,Defense Evasion,XSL Script Processing
+***,T1527,Defense Evasion,Application Access Token
+199,T1098,Credential Access,Account Manipulation
+200,T1139,Credential Access,Bash History
+201,T1110,Credential Access,Brute Force
+202,T1003,Credential Access,Credential Dumping
+203,T1081,Credential Access,Credentials in Files
+204,T1214,Credential Access,Credentials in Registry
+205,T1212,Credential Access,Exploitation for Credential Access
+206,T1187,Credential Access,Forced Authentication
+207,T1179,Credential Access,Hooking
+208,T1056,Credential Access,Input Capture
+209,T1141,Credential Access,Input Prompt
+210,T1208,Credential Access,Kerberoasting
+211,T1142,Credential Access,Keychain
+212,T1171,Credential Access,LLMNR/NBT-NS Poisoning and Relay
+213,T1040,Credential Access,Network Sniffing
+214,T1174,Credential Access,Password Filter DLL
+215,T1145,Credential Access,Private Keys
+216,T1167,Credential Access,Securityd Memory
+217,T1111,Credential Access,Two-Factor Authentication Interception
+217,T1528,Credential Access,Steal Application Access Token
+217,T1503,Credential Access,Credentials from Web Browsers
+218,T1087,Discovery,Account Discovery
+219,T1010,Discovery,Application Window Discovery
+220,T1217,Discovery,Browser Bookmark Discovery
+221,T1482,Discovery,Domain Trust Discovery
+222,T1083,Discovery,File and Directory Discovery
+223,T1046,Discovery,Network Service Scanning
+224,T1135,Discovery,Network Share Discovery
+225,T1040,Discovery,Network Sniffing
+226,T1201,Discovery,Password Policy Discovery
+227,T1120,Discovery,Peripheral Device Discovery
+228,T1069,Discovery,Permission Groups Discovery
+229,T1057,Discovery,Process Discovery
+230,T1012,Discovery,Query Registry
+231,T1018,Discovery,Remote System Discovery
+232,T1063,Discovery,Security Software Discovery
+233,T1082,Discovery,System Information Discovery
+234,T1016,Discovery,System Network Configuration Discovery
+235,T1049,Discovery,System Network Connections Discovery
+236,T1033,Discovery,System Owner/User Discovery
+237,T1007,Discovery,System Service Discovery
+238,T1124,Discovery,System Time Discovery
+239,T1497,Discovery,Virtualization/Sandbox Evasion
+240,T1155,Lateral Movement,AppleScript
+241,T1017,Lateral Movement,Application Deployment Software
+242,T1175,Lateral Movement,Distributed Component Object Model
+243,T1210,Lateral Movement,Exploitation of Remote Services
+244,T1037,Lateral Movement,Logon Scripts
+245,T1075,Lateral Movement,Pass the Hash
+246,T1097,Lateral Movement,Pass the Ticket
+247,T1076,Lateral Movement,Remote Desktop Protocol
+248,T1105,Lateral Movement,Remote File Copy
+249,T1021,Lateral Movement,Remote Services
+250,T1091,Lateral Movement,Replication Through Removable Media
+251,T1051,Lateral Movement,Shared Webroot
+252,T1184,Lateral Movement,SSH Hijacking
+253,T1080,Lateral Movement,Taint Shared Content
+254,T1072,Lateral Movement,Third-party Software
+255,T1077,Lateral Movement,Windows Admin Shares
+256,T1028,Lateral Movement,Windows Remote Management
+257,T1123,Collection,Audio Capture
+258,T1119,Collection,Automated Collection
+259,T1115,Collection,Clipboard Data
+260,T1213,Collection,Data from Information Repositories
+261,T1005,Collection,Data from Local System
+262,T1039,Collection,Data from Network Shared Drive
+263,T1025,Collection,Data from Removable Media
+264,T1074,Collection,Data Staged
+265,T1114,Collection,Email Collection
+266,T1056,Collection,Input Capture
+267,T1185,Collection,Man in the Browser
+268,T1113,Collection,Screen Capture
+269,T1125,Collection,Video Capture
+270,T1043,Command and Control,Commonly Used Port
+271,T1092,Command and Control,Communication Through Removable Media
+272,T1090,Command and Control,Connection Proxy
+273,T1094,Command and Control,Custom Command and Control Protocol
+274,T1024,Command and Control,Custom Cryptographic Protocol
+275,T1132,Command and Control,Data Encoding
+276,T1001,Command and Control,Data Obfuscation
+277,T1172,Command and Control,Domain Fronting
+278,T1483,Command and Control,Domain Generation Algorithms
+279,T1008,Command and Control,Fallback Channels
+280,T1188,Command and Control,Multi-hop Proxy
+281,T1104,Command and Control,Multi-Stage Channels
+282,T1026,Command and Control,Multiband Communication
+283,T1079,Command and Control,Multilayer Encryption
+284,T1205,Command and Control,Port Knocking
+285,T1219,Command and Control,Remote Access Tools
+286,T1105,Command and Control,Remote File Copy
+287,T1071,Command and Control,Standard Application Layer Protocol
+288,T1032,Command and Control,Standard Cryptographic Protocol
+289,T1095,Command and Control,Standard Non-Application Layer Protocol
+290,T1065,Command and Control,Uncommonly Used Port
+291,T1102,Command and Control,Web Service
+292,T1020,Exfiltration,Automated Exfiltration
+293,T1002,Exfiltration,Data Compressed
+294,T1022,Exfiltration,Data Encrypted
+295,T1030,Exfiltration,Data Transfer Size Limits
+296,T1048,Exfiltration,Exfiltration Over Alternative Protocol
+297,T1041,Exfiltration,Exfiltration Over Command and Control Channel
+298,T1011,Exfiltration,Exfiltration Over Other Network Medium
+299,T1052,Exfiltration,Exfiltration Over Physical Medium
+300,T1029,Exfiltration,Scheduled Transfer
+301,T1485,Impact,Data Destruction
+302,T1486,Impact,Data Encrypted for Impact
+303,T1491,Impact,Defacement
+304,T1488,Impact,Disk Content Wipe
+305,T1487,Impact,Disk Structure Wipe
+306,T1499,Impact,Endpoint Denial of Service
+307,T1495,Impact,Firmware Corruption
+308,T1490,Impact,Inhibit System Recovery
+309,T1498,Impact,Network Denial of Service
+310,T1496,Impact,Resource Hijacking
+311,T1494,Impact,Runtime Data Manipulation
+312,T1489,Impact,Service Stop
+313,T1492,Impact,Stored Data Manipulation
+314,T1493,Impact,Transmitted Data Manipulation
+314,T1529,Impact,System Shutdown/Reboot

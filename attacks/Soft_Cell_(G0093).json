@@ -1,0 +1,372 @@
+{
+	"name": "Soft Cell (G0093)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Soft Cell, ATT&CK group G0093 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used the Windows command shell to execute commands.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a modified version of HTRAN to redirect connections between networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a modified version of HTRAN to redirect connections between networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell created rogue, high-privileged domain user accounts to maintain access across waves of a compromise.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a modified version of Mimikatz along with a PowerShell-based Mimikatz to dump credentials on the victim machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1214",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used reg commands to dump specific hives from the Windows Registry, such as the SAM hive, and obtain password hashes.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used winrar to compress and encrypt stolen data prior to exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used winrar to compress and encrypt stolen data prior to exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell collected data from the victim's local system, including password hashes from the SAM hive in the Registry.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell compressed and staged files in multi-part archives in the Recycle Bin prior to exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used DLL side-loading to covertly load PoisonIvy into memory on the victim machine.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1041",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used Web shells and HTRAN for C2 as well as to exfiltrate data.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1190",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell exploited a publicly-facing server to gain access to the network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell established VPN access into victim environments.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell established VPN access into victim environments.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1066",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell ensured each payload had a unique hash, including by using different types of packers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a renamed cmd.exe file to evade detection.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a modified version of HTRAN in which they obfuscated strings such as debug messages in an apparent attempt to evade detection.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1075",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used dumped hashes to authenticate to other machines via pass the hash.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used PowerShell for execution to assist in lateral movement as well as for dumping credentials stored on compromised machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell dropped additional tools to victims during their operation, including portqry.exe, a renamed cmd.exe file, winrar, and HTRAN.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell dropped additional tools to victims during their operation, including portqry.exe, a renamed cmd.exe file, winrar, and HTRAN.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used a modified version of nbtscan to identify available NetBIOS name servers over the network as well as ping to identify remote systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell established persistence for PoisonIvy by created a scheduled task.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell established persistence for PoisonIvy by created a scheduled task.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell established persistence for PoisonIvy by created a scheduled task.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1045",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell packed some payloads using different types of packers, both known and custom.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used ipconfig /all to obtain information about the victim network configuration. The group also ran a modified version of nbtscan to identify available NetBIOS name servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used netstat -oan to obtain information about the victim network connections.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used whoami and query user to obtain information about the victim user.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell leveraged valid accounts to maintain access to a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell leveraged valid accounts to maintain access to a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell leveraged valid accounts to maintain access to a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell leveraged valid accounts to maintain access to a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used Web shells to persist in victim environments and assist in execution and exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used Web shells to persist in victim environments and assist in execution and exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Soft Cell used WMI for execution to assist in lateral movement as well as for installing tools across multiple assets.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Soft Cell"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

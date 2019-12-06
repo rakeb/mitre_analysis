@@ -1,0 +1,372 @@
+{
+	"name": "BRONZE BUTLER (G0060)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by BRONZE BUTLER, ATT&CK group G0060 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used net user /domain to identify account information.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1009",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER downloader code has included \"0\" characters at the end of the file to inflate the file size in a likely attempt to evade anti-virus detection.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER malware xxmm contains a UAC bypass tool for privilege escalation.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER malware xxmm contains a UAC bypass tool for privilege escalation.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER uses the command-line interface.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used various tools to perform credential dumping.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1024",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used a tool called RarStar that encodes data with a custom XOR algorithm when posting it to a C2 server.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has compressed data into password-protected RAR archives prior to exfiltration.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Several BRONZE BUTLER tools encode data with base64 when posting it to a C2 server.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has compressed and encrypted data into password-protected RAR archives prior to exfiltration.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has exfiltrated files stolen from local systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1039",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has exfiltrated files stolen from file shares.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER downloads encoded payloads and decodes them on the victim.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER compromised three Japanese websites using a Flash exploit to perform watering hole attacks.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has exploited Microsoft Word vulnerability CVE-2014-4114 for execution.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has collected a list of files from the victim and uploaded it to its C2 server, and then created a new list of specific files to steal.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "The BRONZE BUTLER uploader or malware the uploader uses command to delete the RAR archives after they have been exfiltrated.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has given malware the same name as an existing file on the file share server to cause users to unwittingly launch and install the malware on additional systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1097",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has created forged Kerberos Ticket Granting Ticket (TGT) and Ticket Granting Service (TGS) tickets to maintain administrative access.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used PowerShell for execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used a batch script that adds a Registry Run key to establish malware persistence.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used various tools to download files, including DGet (a similar tool to wget).[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used various tools to download files, including DGet (a similar tool to wget).[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER typically use ping and Net to enumerate systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used at and schtasks to register a scheduled task to execute malware during lateral movement.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used at and schtasks to register a scheduled task to execute malware during lateral movement.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used at and schtasks to register a scheduled task to execute malware during lateral movement.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1113",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used a tool to capture screenshots.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used VBS, VBE, and batch scripts for execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used VBS, VBE, and batch scripts for execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER used spearphishing emails with malicious Microsoft Word attachments to infect victims.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER malware has used HTTP for C2.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1032",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used RC4 encryption (for Datper malware) and AES (for xxmm malware) to obfuscate HTTP traffic.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1124",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has used net time to check the local time on a target system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER has attempted to get users to launch malicious Microsoft Word attachments delivered via spearphishing emails.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER's MSGET downloader uses a dead drop resolver to access malicious payloads.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "BRONZE BUTLER's MSGET downloader uses a dead drop resolver to access malicious payloads.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by BRONZE BUTLER"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

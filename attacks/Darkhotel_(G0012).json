@@ -1,0 +1,210 @@
+{
+	"name": "Darkhotel (G0012)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Darkhotel, ATT&CK group G0012 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1116",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has used code-signing certificates on its malware that are either forged due to weak keys or stolen. Darkhotel has also stolen certificates and signed backdoors and downloaders with them.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has decrypted strings and imports using RC4 during execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel used embedded iframes on hotel login portals to redirect selected victims to download malware.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has used a keylogger.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has used a keylogger.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has obfuscated code used in an operation using RC4 and other methods.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has searched for anti-malware strings and anti-virus processes running on the system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has been known to establish persistence by adding programs to the Run Registry key.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1091",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel's selective infector modifies executables stored on removable media as a method of spreading across computers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1091",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel's selective infector modifies executables stored on removable media as a method of spreading across computers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has dropped an mspaint.lnk shortcut to disk which launches a shell script that downloads and executes a file.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has dropped an mspaint.lnk shortcut to disk which launches a shell script that downloads and executes a file.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1063",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has searched for anti-malware strings and anti-virus processes running on the system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1023",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has dropped an mspaint.lnk shortcut to disk which launches a shell script that downloads and executes a file.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has sent spearphishing emails with malicious RAR attachments.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has collected the hostname, OS version, service pack version, and the processor architecture from the victim’s machine.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel has collected the IP address and network adapter information from the victim’s machine.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1080",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel used a virus that propagates by infecting executables stored on shared drives.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Darkhotel sent spearphishing emails with malicious attachments that required users to click on an image in the document to drop the malware to disk.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Darkhotel"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

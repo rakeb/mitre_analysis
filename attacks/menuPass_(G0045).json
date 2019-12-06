@@ -1,0 +1,426 @@
+{
+	"name": "menuPass (G0045)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by menuPass, ATT&CK group G0045 v1.3",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used the Microsoft administration tool csvde.exe to export Active Directory data.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass executes commands using a command-line interface and reverse shell. The group has used a modified version of pentesting script wmiexec.vbs to execute commands.[4][7][8][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a global service provider's IP as a proxy for C2 traffic from a victim.[5][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a global service provider's IP as a proxy for C2 traffic from a victim.[5][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a modified version of pentesting tools wmiexec.vbs and secretsdump.py to dump credentials.[7][8]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has compressed files before exfiltration using TAR and RAR.[4][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has encrypted files and information before exfiltration.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has collected various files from the compromised computers.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1039",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has collected data from remote systems by mounting network shares with net use and using Robocopy to transfer data.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass stages data prior to exfiltration in multi-part archives, often saved in the Recycle Bin.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used certutil in a macro to decode base64-encoded content contained in a dropper document attached to an email. The group has also used certutil -decode to decode files on the victim’s machine when dropping UPPERCUT.[9][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used DLL search order hijacking.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used DLL search order hijacking.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used DLL search order hijacking.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used DLL side-loading to launch versions of Mimikatz and PwDump6 as well as UPPERCUT.[7][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A menuPass macro deletes files after it has decoded and decompressed them.[9][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used key loggers to steal usernames and passwords.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used key loggers to steal usernames and passwords.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has been seen changing malicious files to appear legitimate. They have also renamed certutil and move it to a different location on system to avoid detection based on use of the tool. The group has also used esentutl to change file extensions to avoid detection.[6][10][11]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used tcping.exe, similar to Ping, to probe port status on systems of interest.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has encoded strings in its malware with base64 as well as with a simple, single-byte XOR obfuscation using key 0x40.[9][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass uses PowerSploit to inject shellcode into PowerShell.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1093",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used process hollowing in iexplore.exe to load the RedLeaves implant.[9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used RDP connections to move across the victim network.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has installed updates and new malware on victims.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has installed updates and new malware on victims.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used Putty Secure Copy Client (PSCP) to transfer data.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass uses scripts to enumerate IP ranges on the victim network. menuPass has also issued the command net view /domain to a PlugX implant to gather information about remote systems on the network.[7][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a script (atexec.py) to execute a command on a target machine via Task Scheduler.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a script (atexec.py) to execute a command on a target machine via Task Scheduler.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used a script (atexec.py) to execute a command on a target machine via Task Scheduler.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used malicious macros embedded inside Office documents to execute files.[9][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used malicious macros embedded inside Office documents to execute files.[9][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has sent malicious Office documents via email as part of spearphishing campaigns as well as executables disguised as documents.[7][5][10][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used several tools to scan for open NetBIOS nameservers and enumerate NetBIOS sessions.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used net use to conduct connectivity checks to machines.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1199",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used legitimate access granted to Managed Service Providers in order to access victims of interest.[7][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has attempted to get victims to open malicious files such as Windows Shortcuts (.lnk) and/or Microsoft Office documents, sent via email as part of spearphishing campaigns.[7][5][9][6][10]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used valid accounts shared between Managed Service Providers and clients to move between the two environments.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used valid accounts shared between Managed Service Providers and clients to move between the two environments.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used valid accounts shared between Managed Service Providers and clients to move between the two environments.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass has used valid accounts shared between Managed Service Providers and clients to move between the two environments.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "menuPass uses a modified version of pentesting script wmiexec.vbs, which logs into a remote machine using WMI.[7][8]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by menuPass"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

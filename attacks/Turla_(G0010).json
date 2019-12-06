@@ -1,0 +1,444 @@
+{
+	"name": "Turla (G0010)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Turla, ATT&CK group G0010 v1.2",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1134",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors can impersonate or steal process tokens before executing commands. [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1134",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors can impersonate or steal process tokens before executing commands. [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Turla may attempt to connect to systems within a victim's network using net use commands and a predefined list or collection of passwords.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors have used cmd.exe to execute commands.[5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors have included local UPnP RPC proxies.  [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors have included local UPnP RPC proxies.  [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1081",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has gathered credentials from the Windows Credential Manager tool.   [7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has encrypted files stolen from connected USB drives into a RAR file before exfiltration.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors can upload files from victim machines.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1025",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Turla RPC backdoors can collect files from USB thumb drives.[5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used a custom decryption routine, which pulls key and salt values from other artifacts such as a WMI filter or PowerShell Profile, to decode encrypted PowerShell payloads.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1089",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used a AMSI bypass, which patches the in-memory amsi.dll, in PowerShell scripts to bypass Windows antimalware products.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Turla and its RPC backdoors have used APIs calls for various tasks related to subverting AMSI and accessing then executing commands through RPC and/or named pipes.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used WebDAV to upload stolen USB files to a cloud drive.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover files in specific locations on the hard disk %TEMP% directory, the current user's desktop, and in the Program Files directory. Turla RPC backdoors have also searched for files matching the lPH*.dll pattern.[1][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1066",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Based on comparison of Gazer versions, Turla made an effort to obfuscate strings in the malware that could be used as IoCs, including the mutex name and named pipe.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used the Registry to store encrypted payloads.[5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used encryption (including salted 3DES via PowerSploit's Out-EncryptedScript.ps1), random variable names, and base64 encoding to obfuscate PowerShell commands and payloads.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used PowerShell to execute commands/scripts, in some cases via a custom executable or code from Empire's PSInject. Turla has also used PowerShell scripts to load and execute malware in memory.[6][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1504",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used PowerShell profiles to maintain persistence on an infected machine.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1504",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used PowerShell profiles to maintain persistence on an infected machine.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover running processes using the tasklist /v command. Turla RPC backdoors have also enumerated processes associated with specific open ports or named pipes.[1][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used Metasploit to perform reflective DLL injection in order to escalate privileges. Turla has also used PowerSploit's Invoke-ReflectivePEInjection.ps1 to reflectively load a PowerShell payload into a random process on the victim system.[6][8][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used Metasploit to perform reflective DLL injection in order to escalate privileges. Turla has also used PowerSploit's Invoke-ReflectivePEInjection.ps1 to reflectively load a PowerShell payload into a random process on the victim system.[6][8][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1012",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover information in the Windows Registry with the reg query command. Turla has also retrieved PowerShell payloads hidden in Registry keys as well as checking keys associated with null session named pipes .[1][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "A Turla Javascript backdoor added a local_update_check value under the Registry key HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run to establish persistence. Additionally, a Turla custom executable containing Metasploit shellcode is saved to the Startup folder to gain persistence.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used shellcode to download Meterpreter after compromising a victim. Turla RPC backdoors can also download files onto victim machines.[6][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used shellcode to download Meterpreter after compromising a victim. Turla RPC backdoors can also download files onto victim machines.[6][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover remote systems on a local network using the net view and net view /DOMAIN commands.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used PowerShell and VBS scripts throughout its operations.   [7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used PowerShell and VBS scripts throughout its operations.   [7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used spearphishing emails to deliver BrainTest as a malicious attachment.[9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1192",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Turla attempted to trick targets into clicking on a link featuring a seemingly legitimate domain from Adobe.com to download their malware and gain initial access.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used HTTP and HTTPS for C2 communications.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover operating system configuration details using the systeminfo and set commands.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover network configuration details using the arp -a, nbtstat -n, nbtscan, and net config commands. Turla RPC backdoors have also retrieved registered RPC interface information from process memory.[1][7][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover active local network connections using the netstat -an, net use, net file, and net session commands. Turla RPC backdoors have also enumerated the IPv4 TCP connection table via the GetTcpTable2 API call.[1][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1007",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover running services and associated processes using the tasklist /svc command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1124",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Turla surveys a system upon check-in to discover the system time by using the net time command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used spearphishing via a link to get users to download and run their malware.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "A Turla JavaScript backdoor has used Google Apps Script as its C2 server.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Turla JavaScript backdoor has used Google Apps Script as its C2 server.[4][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1077",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Turla used net use commands to connect to lateral systems within a network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1084",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Turla has used WMI event filters and consumers to establish persistence.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1004",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Turla established persistence by adding a Shell value under the Registry key HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion]Winlogon.[4]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Turla"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

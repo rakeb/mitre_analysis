@@ -1,0 +1,183 @@
+{
+	"name": "Silence (G0091)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Silence, ATT&CK group G0091 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used Windows command-line to run commands.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1223",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has weaponized CHM files in their phishing campaigns.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1223",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has weaponized CHM files in their phishing campaigns.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence leverages the Windows API to perform a variety of tasks.   [2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Silence deleted scheduled task files after its execution.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used environment variable string substitution for obfuscation.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used scheduled tasks to stage its operation.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used scheduled tasks to stage its operation.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used scheduled tasks to stage its operation.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1113",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Silence can capture victim screen activity.    [2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used JS, VBS, and PowerShell scripts.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used JS, VBS, and PowerShell scripts.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1035",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has used Winexe to install a service on the remote system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has sent emails with malicious DOCX, CHM and ZIP attachments. [1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Silence attempts to get users to launch malicious attachments delivered via spearphishing emails.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1125",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Silence has been observed making videos of victims to observe bank employees day to day activities.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Silence"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

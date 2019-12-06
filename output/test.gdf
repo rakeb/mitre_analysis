@@ -1,0 +1,9 @@
+nodedef>name VARCHAR,label VARCHAR,class VARCHAR, visible BOOLEAN,labelvisible BOOLEAN,width DOUBLE,height DOUBLE,x DOUBLE,y DOUBLE,color VARCHAR
+s1,'Hello "world" !',type1
+s2,'Well, this is',type1
+s3,'A correct 'GDF' file',type1
+edgedef>node1 VARCHAR,node2 VARCHAR,directed BOOLEAN, attack VARCHAR
+s1,s2,true, a1
+s2,s3,true, a1
+s3,s2,true, a2
+s3,s1,true, a2
