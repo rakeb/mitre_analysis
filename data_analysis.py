@@ -22,11 +22,27 @@ tactics_list = ['initial-access', 'execution', 'persistence', 'privilege-escalat
                 'credential-access', 'discovery', 'lateral-movement', 'collection', 'command-and-control',
                 'exfiltration', 'impact']
 
+# global_techniques_list_sorted_on_tactics = {
+#     'initial-access': [],
+#     'execution': [],
+#     'persistence': [],
+#     'privilege-escalation': [],
+#     'defense-evasion': [],
+#     'credential-access': [],
+#     'discovery': [],
+#     'lateral-movement': [],
+#     'collection': [],
+#     'command-and-control': [],
+#     'exfiltration': [],
+#     'impact': []
+# }
+
 global_techniques_list_sorted_on_tactics = {
     'initial-access': [],
-    'execution': [],
-    'persistence': [],
-    'privilege-escalation': [],
+    # 'execution': [],
+    # 'persistence': [],
+    # 'privilege-escalation': [],
+    'exe_per_prev': [],
     'defense-evasion': [],
     'credential-access': [],
     'discovery': [],
@@ -285,12 +301,28 @@ apt19 = {
 }
 
 
+# def tactic_based_sorting(mitre_techniques):
+#     global global_techniques_list_sorted_on_tactics
+#     techniques_list_sorted_on_tactics = copy.deepcopy(global_techniques_list_sorted_on_tactics)
+#     for each_technique in mitre_techniques:
+#         tactic_name = each_technique['tactic']
+#         technique_list = techniques_list_sorted_on_tactics[tactic_name]
+#         technique_list.append(each_technique)
+#
+#     for tactic in list(techniques_list_sorted_on_tactics.keys()):
+#         techniques = techniques_list_sorted_on_tactics[tactic]
+#         if len(techniques) == 0:
+#             del techniques_list_sorted_on_tactics[tactic]
+#     return techniques_list_sorted_on_tactics
 def tactic_based_sorting(mitre_techniques):
     global global_techniques_list_sorted_on_tactics
     techniques_list_sorted_on_tactics = copy.deepcopy(global_techniques_list_sorted_on_tactics)
     for each_technique in mitre_techniques:
         tactic_name = each_technique['tactic']
-        technique_list = techniques_list_sorted_on_tactics[tactic_name]
+        if tactic_name == 'execution' or tactic_name == 'persistence' or tactic_name == 'privilege-escalation':
+            technique_list = techniques_list_sorted_on_tactics['exe_per_prev']
+        else:
+            technique_list = techniques_list_sorted_on_tactics[tactic_name]
         technique_list.append(each_technique)
 
     for tactic in list(techniques_list_sorted_on_tactics.keys()):
@@ -378,7 +410,7 @@ def generate_gdf_edges(all_attacks_list):
                 if type(prev_techniques_list) is str:
                     for technique in technique_list:
                         f.write('%s, %s, false, %s\n' % (
-                        prev_techniques_list, technique['techniqueID'], str(edge_color_for_individual_attack)))
+                            prev_techniques_list, technique['techniqueID'], str(edge_color_for_individual_attack)))
                 else:
                     if is_current_technique_is_bigger_than_prev(technique_list, prev_techniques_list):
                         bigger_list = technique_list
@@ -393,7 +425,7 @@ def generate_gdf_edges(all_attacks_list):
                         dst_technique_id = smaller_list[index_for_smaller_list]['techniqueID']
                         if src_technique_id != dst_technique_id:
                             f.write('%s, %s, false, %s\n' % (
-                            src_technique_id, dst_technique_id, str(edge_color_for_individual_attack)))
+                                src_technique_id, dst_technique_id, str(edge_color_for_individual_attack)))
 
                 prev_techniques_list = technique_list
             edge_color_for_individual_attack = edge_color_for_individual_attack + 1
@@ -403,7 +435,7 @@ def generate_gdf_edges(all_attacks_list):
 # TODO therefore need to do something like loop through the tactic list and search for tactic into the sorted_techniques
 # TODO and if technique found, then build edges between them
 def generate_gdf_directed_edges(all_attacks_list):
-    out_edges_file_name = 'output/gdf_edges_undirected.gdf'
+    out_edges_file_name = 'output/gdf_edges_directed.gdf'
     with open(out_edges_file_name, 'w') as f:
         f.write('edgedef>node1 VARCHAR,node2 VARCHAR,directed BOOLEAN, attack VARCHAR\n')
         edge_color_for_individual_attack = 0
@@ -442,7 +474,7 @@ def generate_gdf_directed_edges(all_attacks_list):
 
 
 def final_gdf():
-    filenames = ['output/gdf_nodes.gdf', 'output/gdf_edges_undirected.gdf']
+    filenames = ['output/gdf_nodes.gdf', 'output/gdf_edges_directed.gdf']
     with open('output/final_output.gdf', 'w') as outfile:
         for fname in filenames:
             with open(fname) as infile:
@@ -453,7 +485,7 @@ def final_gdf():
 if __name__ == '__main__':
     # tactic_based_sorting(apt19['techniques'])
     generate_gdf_nodes()
-    all_attacks_list = start_parsing()
+    all_attacks_list = start_parsing(2)
     # generate_gdf_edges(all_attacks_list)
     generate_gdf_directed_edges(all_attacks_list)
     final_gdf()
