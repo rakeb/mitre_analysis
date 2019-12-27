@@ -1,0 +1,156 @@
+{
+	"name": "Leafminer (G0077)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Leafminer, ATT&CK group G0077 v2.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called BruteForcer to perform a brute force attack.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called Imecab to set up a persistent remote access account on the victim machine.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used several tools for retrieving login and password information.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer has infected victims using watering holes.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1114",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called MailSniper to search through the Exchange server mailboxes for keywords.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called MailSniper to search for files on the desktop and another utility called Sobolsoft to extract attachments from EML files.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer scanned network services to search for vulnerabilities in the victim system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer obfuscated scripts that were used on victim machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called Imecab to set up a persistent remote access account on the victim machine.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used a tool called Imecab to set up a persistent remote access account on the victim machine.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer used Microsoft’s Sysinternals tools to gather detailed information about remote systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer infected victims using JavaScript code.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Leafminer infected victims using JavaScript code.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Leafminer"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

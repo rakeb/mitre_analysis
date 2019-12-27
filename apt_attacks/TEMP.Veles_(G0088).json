@@ -1,0 +1,264 @@
+{
+	"name": "TEMP.Veles (G0088)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by TEMP.Veles, ATT&CK group G0088 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used port 443 for C2.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used Mimikatz and a custom tool, SecHack, to harvest credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has created staging folders in directories that were infrequently used by legitimate users or processes.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used a VPN to persist in the victim environment.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used a VPN to persist in the victim environment.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles routinely deleted tools, logs, and other files after they were finished with them.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1183",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has modified and added entries within HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options to maintain persistence.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1183",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has modified and added entries within HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options to maintain persistence.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1183",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has modified and added entries within HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options to maintain persistence.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1066",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has modified files based on the open-source project cryptcat in an apparent attempt to decrease AV detection rates.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has performed a variety of methods to look like valid users, including renaming files and mimicking legitimate administrator activities.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used a publicly-available PowerShell-based tool, WMImplant. The group has also used PowerShell to perform Timestomping.[2][1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles utilized RDP throughout an operation.   [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1021",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has relied on encrypted SSH-based tunnels to transfer tools and for remote command/program execution.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used scheduled task XML triggers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used scheduled task XML triggers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used scheduled task XML triggers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1099",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles used timestomping to modify the $STANDARD_INFORMATION attribute on tools.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1065",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used ports 4444, 8531, and 50501 for C2.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used compromised VPN accounts.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used compromised VPN accounts.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used compromised VPN accounts.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has used compromised VPN accounts.  [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has planted webshells on Outlook Exchange servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "TEMP.Veles has planted webshells on Outlook Exchange servers.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by TEMP.Veles"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

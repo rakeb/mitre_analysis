@@ -1,0 +1,66 @@
+{
+	"name": "Dust Storm (G0031)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Dust Storm, ATT&CK group G0031 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Dust Storm has used Android backdoors capable of exfiltrating specific files directly from the infected devices.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Dust Storm has used Android backdoors capable of enumerating specific files on the infected devices.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Dust Storm has encoded payloads with a single-byte XOR, both skipping the key itself and zeroing in an attempt to avoid exposing the key.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Dust Storm"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

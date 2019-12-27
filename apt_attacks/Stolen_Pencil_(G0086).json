@@ -1,0 +1,183 @@
+{
+	"name": "Stolen Pencil (G0086)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Stolen Pencil, ATT&CK group G0086 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1176",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil victims are prompted to install malicious Google Chrome extensions which gave the threat actor the ability to read data from any website accessed.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil gathers credentials using Moafee and Procdump.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1503",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has used tools that are capable of obtaining credentials from web browsers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1081",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has used tools that are capable of obtaining credentials from saved mail.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to log keystrokes to %userprofile%\\appdata\\roaming\\apach.{{txt,log}}.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to log keystrokes to %userprofile%\\appdata\\roaming\\apach.{{txt,log}}.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to sniff the network for passwords.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to sniff the network for passwords.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil utilized RDP for direct remote point-and-click access.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1192",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil sent spearphishing emails containing links to domains controlled by the threat actor.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Stolen Pencil has a tool to add a Windows admin account in order to allow them to ensure continued access via RDP.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Stolen Pencil"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

@@ -1,0 +1,156 @@
+{
+	"name": "Carbanak (G0008)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Carbanak, ATT&CK group G0008 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1089",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak may use netsh to add local firewall rule exceptions.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak malware names itself \"svchost.exe,\" which is the name of the Windows shared service host program.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak malware installs itself as a service to provide persistence and SYSTEM privileges.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak malware installs itself as a service to provide persistence and SYSTEM privileges.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1219",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak used legitimate programs such as AmmyAdmin and Team Viewer for remote interactive C2 to target systems.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1085",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak installs VNC server software that executes through rundll32.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1085",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak installs VNC server software that executes through rundll32.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak actors used legitimate credentials of banking employees to perform operations that sent them millions of dollars.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak actors used legitimate credentials of banking employees to perform operations that sent them millions of dollars.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak actors used legitimate credentials of banking employees to perform operations that sent them millions of dollars.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak actors used legitimate credentials of banking employees to perform operations that sent them millions of dollars.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak has used a VBScript named \"ggldr\" that uses Google Apps Script, Sheets, and Forms services for C2.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Carbanak has used a VBScript named \"ggldr\" that uses Google Apps Script, Sheets, and Forms services for C2.[3]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Carbanak"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

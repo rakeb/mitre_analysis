@@ -1,0 +1,192 @@
+{
+	"name": "APT1 (G0006)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT1, ATT&CK group G0006 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 used the commands net localgroup,net user, and net group to find accounts on the system.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1119",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 used a batch script to perform a series of discovery techniques and saves it to a text file.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has used the Windows command shell to execute commands.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has been known to use credential dumping.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has used RAR to compress files before moving them outside of the victim network.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has collected files from a local victim.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1114",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 uses two utilities, GETMAIL and MAPIGET, to steal email. GETMAIL extracts emails from archived Outlook .pst files, and MAPIGET steals email still on Exchange servers that has not yet been archived.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "The file name AcroRD32.exe, a legitimate process name for Adobe's Acrobat Reader, was used by APT1 as a name for malware.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1135",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 listed connected network shares.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1075",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "The APT1 group is known to have used pass the hash.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 gathered a list of running processes on the system using tasklist /v.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "The APT1 group is known to have used RDP during operations.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has used batch scripting to automate execution of commands.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 has used batch scripting to automate execution of commands.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 used the ipconfig /all command to gather network configuration information.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 used the net use command to get a listing on network connections.",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1007",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT1 used the commands net start and tasklist to get a listing of the services on the system.",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT1"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

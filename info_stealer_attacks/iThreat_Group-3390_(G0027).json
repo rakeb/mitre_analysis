@@ -1,0 +1,561 @@
+{
+	"name": "Threat Group-3390 (G0027)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Threat Group-3390, ATT&CK group G0027 v1.2",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used net user to conduct internal discovery of systems.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1119",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 ran a command to compile an archive of file types of interest from the victim user's directories.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can use a public UAC bypass method to elevate privileges.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can use a public UAC bypass method to elevate privileges.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used command-line interfaces for execution.[2][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "C2 traffic for most Threat Group-3390 tools occurs over Port Numbers 53, 80, and 443.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors have used gsecdump and a modified version of Mimikatz called Wrapikatz to dump credentials. They have also dumped credentials from domain controllers.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used RAR to compress, encrypt, and password-protect files prior to exfiltration.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used RAR to compress, encrypt, and password-protect files prior to exfiltration.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 ran a command to compile an archive of file types of interest from the victim user's directories.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1074",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has staged encrypted archives for exfiltration on Internet-facing servers that had previously been compromised with China Chopper.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1030",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors have split RAR files for exfiltration into parts.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "During execution, Threat Group-3390 malware deobfuscates and decompresses code that was encoded with Metasploit’s shikata_ga_nai encoder as well as compressed with LZNT1 compression.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1089",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used appcmd.exe to disable logging on a victim server.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has performed DLL search order hijacking to execute their payload.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has performed DLL search order hijacking to execute their payload.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1038",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has performed DLL search order hijacking to execute their payload.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used DLL side-loading, including by using legitimate Kaspersky antivirus variants in which the DLL acts as a stub loader that loads and executes the shell code.[1][2][3][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has extensively used strategic web compromises to target victims.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has exploited the Microsoft SharePoint vulnerability CVE-2019-0604.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used CVE-2014-6324 to escalate privileges.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1210",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has exploited MS17-101 to move laterally to other systems on the network.    [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors look for and use VPN profiles during an operation to access the network using external VPN services.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors look for and use VPN profiles during an operation to access the network using external VPN services.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has deleted existing logs and exfiltrated file archives from a victim.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors installed a credential logger on Microsoft Exchange servers. Threat Group-3390 also leveraged the reconnaissance framework, ScanBox, to capture keystrokes.[1][6][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors installed a credential logger on Microsoft Exchange servers. Threat Group-3390 also leveraged the reconnaissance framework, ScanBox, to capture keystrokes.[1][6][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can create a new Registry key under HKEY_CURRENT_USER\\Software\\Classes\\.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors use the Hunter tool to conduct network service discovery for vulnerable systems.[1][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1126",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has detached network shares after exfiltrating files, likely to evade detection.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can create a new service, naming it after the config information, to gain persistence.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can create a new service, naming it after the config information, to gain persistence.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can encrypt payloads using XOR. Threat Group-3390 malware is also obfuscated using Metasploit’s shikata_ga_nai encoder as well as compressed with LZNT1 compression.[4][3][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used PowerShell for execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can spawn svchost.exe and inject the payload into that process.[4][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can spawn svchost.exe and inject the payload into that process.[4][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1012",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can read and decrypt stored Registry values.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has deployed backup web shells and obtained OWA account credentials during intrusions that it subsequently used to attempt to regain access when evicted from a victim network.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1108",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has deployed backup web shells and obtained OWA account credentials during intrusions that it subsequently used to attempt to regain access when evicted from a victim network.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can add the binary’s path to the Registry key Software\\Microsoft\\Windows\\CurrentVersion\\Run to add persistence.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "After re-establishing access to a victim network, Threat Group-3390 actors download tools including gsecdump and WCE that are staged temporarily on websites that were previously compromised but never used.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "After re-establishing access to a victim network, Threat Group-3390 actors download tools including gsecdump and WCE that are staged temporarily on websites that were previously compromised but never used.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used the net view command.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors use at to schedule tasks to run self-extracting RAR archives, which install HTTPBrowser or PlugX on other victims on a network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors use at to schedule tasks to run self-extracting RAR archives, which install HTTPBrowser or PlugX on other victims on a network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors use at to schedule tasks to run self-extracting RAR archives, which install HTTPBrowser or PlugX on other victims on a network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 malware has used HTTP for C2.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors use nbtscan to discover vulnerable systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used net use to conduct internal discovery of systems. The group has also used quser.exe to identify existing RDP sessions on a victim.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors obtain legitimate credentials using a variety of methods and use them to further lateral movement on victim networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors obtain legitimate credentials using a variety of methods and use them to further lateral movement on victim networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors obtain legitimate credentials using a variety of methods and use them to further lateral movement on victim networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 actors obtain legitimate credentials using a variety of methods and use them to further lateral movement on victim networks.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used a variety of Web shells.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used a variety of Web shells.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "A Threat Group-3390 tool can use WMI to execute a binary.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1028",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used WinRM to enable remote execution.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1028",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-3390 has used WinRM to enable remote execution.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Threat Group-3390"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

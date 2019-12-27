@@ -1,0 +1,165 @@
+{
+	"name": "Dark Caracal (G0070)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Dark Caracal, ATT&CK group G0070 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1223",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal leveraged a compiled HTML file that contained a command to download and run an executable.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1223",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal leveraged a compiled HTML file that contained a command to download and run an executable.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal collected complete contents of the 'Pictures' folder from compromised Windows systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal leveraged a watering hole to serve up malicious code.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal collected file listings of all default Windows directories.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal has obfuscated strings in Bandook by base64 encoding, and then encrypting them.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal's version of Bandook adds a registry key to HKEY_USERS\\Software\\Microsoft\\Windows\\CurrentVersion\\Run for persistence.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1113",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal took screen shots using their Windows malware.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal has used macros in Word documents that would download a second stage if executed.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal has used macros in Word documents that would download a second stage if executed.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1045",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal has used UPX to pack Bandook.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1194",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal spearphished victims via Facebook and Whatsapp.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal's version of Bandook communicates with their server over a TCP port using HTTP payloads Base64 encoded and suffixed with the string \"&amp;&amp;&amp;\".[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Dark Caracal makes their malware look like Flash Player, Office, or PDF documents in order to entice a user to click on it.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Dark Caracal"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

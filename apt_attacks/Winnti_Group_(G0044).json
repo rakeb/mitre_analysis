@@ -1,0 +1,66 @@
+{
+	"name": "Winnti Group (G0044)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Winnti Group, ATT&CK group G0044 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1116",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Winnti Group used stolen certificates to sign its malware.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Winnti Group looked for a specific process running on infected servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1014",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Winnti Group used a rootkit to modify typical server functionality.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Winnti Group"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

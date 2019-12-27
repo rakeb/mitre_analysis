@@ -1,0 +1,111 @@
+{
+	"name": "Threat Group-1314 (G0028)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Threat Group-1314, ATT&CK group G0028 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors spawned shells on remote systems on a victim network to execute commands.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1072",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used a victim's endpoint management platform, Altiris, for lateral movement.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1072",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used a victim's endpoint management platform, Altiris, for lateral movement.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used compromised credentials for the victim's endpoint management platform, Altiris, to move laterally.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used compromised credentials for the victim's endpoint management platform, Altiris, to move laterally.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used compromised credentials for the victim's endpoint management platform, Altiris, to move laterally.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors used compromised credentials for the victim's endpoint management platform, Altiris, to move laterally.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1077",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Threat Group-1314 actors mapped network drives using net use.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Threat Group-1314"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

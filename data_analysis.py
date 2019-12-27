@@ -1,8 +1,13 @@
 import copy
 import csv
+import errno
 import json
 import os
 from os.path import isfile, join
+
+ATTACK_FILE_DIR = 'info_stealer_attacks/'
+NODE_FILE_DIR = ''
+ATTACK_NAME_SPLITTER = '_('
 
 enterprise_tactics = {
     0: {
@@ -300,6 +305,22 @@ apt19 = {
     "selectTechniquesAcrossTactics": True
 }
 
+node_color = {
+    'Attack': '255,0,0',  # red
+    'Initial Access': '0,128,0',  # green
+    'Execution': '192,192,192',  # silver
+    'Persistence': '65,105,225',
+    'Privilege Escalation': '0,0,255',
+    'Defense Evasion': '0,0,205',
+    'Credential Access': '210,180,140',
+    'Discovery': '0,255,255',
+    'Lateral Movement': '255,20,147',
+    'Collection': '255,255,0',
+    'Command and Control': '47,79,79',
+    'Exfiltration': '173,255,47',
+    'Impact': '199,21,133',
+}
+
 
 # def tactic_based_sorting(mitre_techniques):
 #     global global_techniques_list_sorted_on_tactics
@@ -334,8 +355,9 @@ def tactic_based_sorting(mitre_techniques):
 
 def files_from_directory():
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    mypath = dir_path + '/attacks'
-    onlyfiles = [f for f in os.listdir(mypath) if isfile(join(mypath, f))]
+    mypath = join(dir_path, ATTACK_FILE_DIR)
+    onlyfiles = [f for f in os.listdir(mypath) if f.endswith('.json') if isfile(join(mypath, f))]
+    # absfiles = [join(mypath, f) for f in os.listdir(mypath) if f.endswith('.json') if isfile(join(mypath, f))]
     return onlyfiles
 
 
@@ -351,24 +373,36 @@ def read_each_attack_json(file_name):
 def generate_gdf_nodes():
     mitre_node_file_name = 'data/mitre_technique_nodes.csv'
     out_nodes_file_name = 'output/gdf_nodes.gdf'
+
+    if not os.path.exists(os.path.dirname(out_nodes_file_name)):
+        try:
+            os.makedirs(os.path.dirname(out_nodes_file_name))
+        except OSError as exc:  # Guard against race condition
+            if exc.errno != errno.EEXIST:
+                raise
+
     with open(out_nodes_file_name, 'w') as f:
-        f.write('nodedef>name VARCHAR, label VARCHAR, category VARCHAR\n')
-        for attack_file_name in files_from_directory():
-            attack_name = attack_file_name.split('_')[0]
-            f.write('%s,%s,Attack\n' % (attack_name, attack_name))
+        f.write('nodedef>name VARCHAR, label VARCHAR, category VARCHAR, color VARCHAR\n')
+        onlyfiles = files_from_directory()
+        for attack_file_name in onlyfiles:
+            attack_name = attack_file_name.split(ATTACK_NAME_SPLITTER)[0]
+            f.write("%s,%s,Attack,'%s'\n" % (attack_name, attack_name, node_color['Attack']))
 
     with open(mitre_node_file_name, "r") as f:
         reader = csv.reader(f, delimiter=",")
+        header = next(reader)
 
         with open(out_nodes_file_name, 'a') as f:
-            for i, line in enumerate(reader):
-                if i != 0:
-                    f.write(line[1])
-                    f.write(',')
-                    f.write(line[3])
-                    f.write(',')
-                    f.write(line[2])
-                    f.write('\n')
+            for _, line in enumerate(reader):
+                f.write("%s,%s,%s,'%s'\n" % (line[1], line[3], line[2], node_color[line[2]]))
+
+                # if i != 0:
+                #     f.write(line[1])
+                #     f.write(',')
+                #     f.write(line[3])
+                #     f.write(',')
+                #     f.write(line[2])
+                #     f.write('\n')
 
 
 def start_parsing(count=None):
@@ -376,10 +410,11 @@ def start_parsing(count=None):
     all_attacks_list = []
 
     for each_file in files_list:
-        obj = read_each_attack_json('attacks/' + each_file)
+        obj = read_each_attack_json(ATTACK_FILE_DIR + each_file)
+        # obj = read_each_attack_json(each_file)
         sorted_techniques = tactic_based_sorting(obj['techniques'])
         # attack_dict = {each_file.split('.')[0]: sorted_techniques}
-        attack_dict = {'attack_name': each_file.split('_')[0], 'sorted_techniques': sorted_techniques}
+        attack_dict = {'attack_name': each_file.split(ATTACK_NAME_SPLITTER)[0], 'sorted_techniques': sorted_techniques}
         all_attacks_list.append(attack_dict)
         if count:
             count = count - 1
@@ -485,7 +520,7 @@ def final_gdf():
 if __name__ == '__main__':
     # tactic_based_sorting(apt19['techniques'])
     generate_gdf_nodes()
-    all_attacks_list = start_parsing(2)
+    all_attacks_list = start_parsing()
     # generate_gdf_edges(all_attacks_list)
     generate_gdf_directed_edges(all_attacks_list)
     final_gdf()

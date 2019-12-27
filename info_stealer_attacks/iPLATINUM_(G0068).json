@@ -1,0 +1,192 @@
+{
+	"name": "PLATINUM (G0068)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by PLATINUM, ATT&CK group G0068 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used keyloggers that are also capable of dumping credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1094",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used the Intel® Active Management Technology (AMT) Serial-over-LAN (SOL) channel for command and control.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has sometimes used drive-by attacks against vulnerable browser plugins.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has leveraged a zero-day vulnerability to escalate privileges.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1179",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM is capable of using Windows hook interfaces for information gathering such as credential access.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1179",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM is capable of using Windows hook interfaces for information gathering such as credential access.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1179",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM is capable of using Windows hook interfaces for information gathering such as credential access.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used several different keyloggers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used several different keyloggers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has renamed rar.exe to avoid detection.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used various methods of process injection including hot patching.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used various methods of process injection including hot patching.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has transferred files using the Intel® Active Management Technology (AMT) Serial-over-LAN (SOL) channel.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has transferred files using the Intel® Active Management Technology (AMT) Serial-over-LAN (SOL) channel.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has sent spearphishing emails with attachments to victims as its primary initial access vector.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1095",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has used the Intel® Active Management Technology (AMT) Serial-over-LAN (SOL) channel for command and control.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "PLATINUM has attempted to get users to open malicious files by sending spearphishing emails with attachments to victims.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by PLATINUM"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

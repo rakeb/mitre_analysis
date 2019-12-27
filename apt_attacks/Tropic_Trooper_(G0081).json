@@ -1,0 +1,228 @@
+{
+	"name": "Tropic Trooper (G0081)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Tropic Trooper, ATT&CK group G0081 v1.2",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper can use ports 443 and 53 for C2 communications via malware called TClient.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper used shellcode with an XOR algorithm to decrypt a payload.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has been known to side-load DLLs using a valid version of Windows Address Book executable with one of their tools.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has executed commands through Microsoft security vulnerabilities, including CVE-2017-11882, CVE-2018-0802, and CVE-2012-0158.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1158",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has created a hidden directory under C:\\ProgramData\\Apple\\Updates\\.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1158",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has created a hidden directory under C:\\ProgramData\\Apple\\Updates\\.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper used pr to scan for open ports on target systems.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1135",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper used netview to scan target systems for shared resources.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper installs a service pointing to a malicious DLL dropped to disk.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper installs a service pointing to a malicious DLL dropped to disk.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has encrypted configuration files.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper enumerates the running processes on the system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has injected a DLL backdoor into a file dllhost.exe.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has injected a DLL backdoor into a file dllhost.exe.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1063",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper searches for anti-virus software running on the system.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper sent spearphishing emails that contained malicious Microsoft Office attachments.[2][3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1032",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper uses SSL to connect to C2 servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper has detected a target system’s OS version.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper used letmein to scan for saved usernames on the target system.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1221",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper delivered malicious documents with the XLSX extension, typically used by OpenXML documents, but the file itself was actually an OLE (XLS) document.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1004",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Tropic Trooper creates the Registry key HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Shell and sets the value to establish persistence.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Tropic Trooper"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

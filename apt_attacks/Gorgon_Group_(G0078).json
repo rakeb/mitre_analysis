@@ -1,0 +1,210 @@
+{
+	"name": "Gorgon Group (G0078)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Gorgon Group, ATT&CK group G0078 v1.3",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can use cmd.exe to download and execute payloads and to execute commands on the system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1140",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can decode contents from a payload that was Base64 encoded and write the contents to a file.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1089",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can attempt to disable security features in Microsoft Office and Windows Defender using the taskkill command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can leverage the Windows API call, CreateProcessA(), for execution.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1143",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group has used -W Hidden to conceal PowerShell windows by setting the WindowStyle parameter to hidden.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can deactivate security mechanisms in Microsoft Office by editing several keys and values under HKCU\\Software\\Microsoft\\Office\\.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can use PowerShell commands to download and execute a payload and open a decoy document on the victim’s machine.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1093",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can use process hollowing to inject one of its trojans into another process.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can download a remote access tool, ShiftyBug, and inject into another process.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can download a remote access tool, ShiftyBug, and inject into another process.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can create a .lnk file and add a Registry Run key to establish persistence.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can download additional files from C2 servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can download additional files from C2 servers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group has used macros in Spearphishing Attachments as well as executed VBScripts on victim machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group has used macros in Spearphishing Attachments as well as executed VBScripts on victim machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1023",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group malware can create a .lnk file and add a Registry Run key to establish persistence.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group sent emails to victims with malicious Microsoft Office documents attached.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1065",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group has used a variant of ShiftyBug that communicates with its C2 server over port 6666.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Gorgon Group attempted to get users to launch malicious Microsoft Office attachments delivered via spearphishing emails.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Gorgon Group"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

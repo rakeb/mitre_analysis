@@ -1,0 +1,93 @@
+{
+	"name": "DarkHydrus (G0079)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by DarkHydrus, ATT&CK group G0079 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1187",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus used Template Injection to launch an authentication window for users to enter their credentials.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1143",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus has used -WindowStyle Hidden to conceal PowerShell windows.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus leveraged PowerShell to download and execute additional scripts for execution.[1][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus has sent spearphishing emails with password-protected RAR archives containing malicious Excel Web Query files (.iqy). The group has also sent spearphishing emails that contained malicious Microsoft Office documents that use the \"attachedTemplate\" technique to load a template from a remote server.[1][3][2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1221",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus used an open-source tool, Phishery, to inject malicious remote template URLs into Microsoft Word documents and then sent them to victims to enable Forced Authentication.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "DarkHydrus has sent malware that required users to hit the enable button in Microsoft Excel to allow an .iqy file to be downloaded.[1][2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by DarkHydrus"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

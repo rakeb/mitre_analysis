@@ -1,0 +1,291 @@
+{
+	"name": "APT33 (G0064)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT33, ATT&CK group G0064 v1.2",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used password spraying to gain access to target systems.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used port 443 for command and control.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used a variety of publicly available tools like LaZagne, Mimikatz, Gpppassword, SniffPass, and ProcDump to dump credentials.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used WinRAR to compress data prior to exfil. [3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1132",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used base64 to encode command and control traffic.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1480",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used kill dates in their malware to guardrail execution.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used FTP to exfiltrate files (separately from the C2 channel).[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has attempted to exploit a known vulnerability in WinRAR (CVE-2018-20250).[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used a publicly available exploit for CVE-2017-0213 to escalate privileges on a local system.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used SniffPass to collect credentials by sniffing network traffic.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used SniffPass to collect credentials by sniffing network traffic.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used base64 to encode payloads.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has utilized PowerShell to download files from the C2 server and run various scripts.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has deployed a tool known as DarkComet to the Startup folder of a victim.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has downloaded additional files and programs from its C2 server. [3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has downloaded additional files and programs from its C2 server. [3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has created a scheduled task to execute a .vbe file multiple times a day.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has created a scheduled task to execute a .vbe file multiple times a day.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has created a scheduled task to execute a .vbe file multiple times a day.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1192",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has sent spearphishing emails containing links to .hta files.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used HTTP for command and control.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1032",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used AES for encryption of command and control traffic.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1065",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used ports 808 and 880 for command and control.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has lured users to click links to malicious HTML applications delivered via spearphishing emails.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used valid accounts for initial access and privilege escalation.[2][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used valid accounts for initial access and privilege escalation.[2][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used valid accounts for initial access and privilege escalation.[2][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT33 has used valid accounts for initial access and privilege escalation.[2][4]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT33"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

@@ -1,0 +1,57 @@
+{
+	"name": "Orangeworm (G0071)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Orangeworm, ATT&CK group G0071 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Orangeworm has used HTTP for C2.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1077",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Orangeworm has copied its backdoor across open network shares, including ADMIN$, C$WINDOWS, D$WINDOWS, and E$WINDOWS.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Orangeworm"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

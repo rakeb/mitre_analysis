@@ -1,0 +1,156 @@
+{
+	"name": "Rancor (G0075)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by Rancor, ATT&CK group G0075 v1.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used cmd.exe to execute commmands.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has downloaded additional malware, including by using certutil.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has downloaded additional malware, including by using certutil.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor launched a scheduled task to gain persistence using the schtasks /create /sc command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor launched a scheduled task to gain persistence using the schtasks /create /sc command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor launched a scheduled task to gain persistence using the schtasks /create /sc command.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used shell and VBS scripts as well as embedded macros for execution.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used shell and VBS scripts as well as embedded macros for execution.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1218",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used msiexec to download and execute malicious installer files over HTTP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1218",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used msiexec to download and execute malicious installer files over HTTP.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has attached a malicious document to an email to gain initial access.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor has used HTTP for C2.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "Rancor attempted to get users to click on an embedded macro within a Microsoft Office Excel document to launch their malware.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by Rancor"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

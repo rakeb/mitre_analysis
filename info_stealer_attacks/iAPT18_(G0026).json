@@ -1,0 +1,210 @@
+{
+	"name": "APT18 (G0026)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT18, ATT&CK group G0026 v2.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 uses cmd.exe to execute commands on the victim’s machine.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 uses port 80 for C2 communications.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 can list files information for specific directories.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors deleted tools and batch files from victim systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 obfuscates strings in the payload.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 establishes persistence via the HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run key.[4][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 can upload a file to the victim’s machine.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 can upload a file to the victim’s machine.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors used the native at Windows task scheduler tool to use scheduled tasks for execution on a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors used the native at Windows task scheduler tool to use scheduled tasks for execution on a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors used the native at Windows task scheduler tool to use scheduled tasks for execution on a victim network.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 uses HTTP and DNS for C2 communications.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 can collect system information from the victim’s machine.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT18 actors leverage legitimate credentials to log into external remote services.[2]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT18"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

@@ -1,0 +1,327 @@
+{
+	"name": "APT37 (G0067)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT37, ATT&CK group G0067 v1.3",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1123",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used an audio capturing utility known as SOUNDWAVE that captures microphone input.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has a function in the initial dropper to bypass Windows UAC in order to execute the next payload with higher privileges.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1088",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has a function in the initial dropper to bypass Windows UAC in order to execute the next payload with higher privileges.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1116",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has signed its malware with an invalid digital certificates listed as \"Tencent Technology (Shenzhen) Company Limited.\"[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used the command-line interface.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used port 8080 for C2.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used a credential stealer known as ZUMKONG that can harvest usernames and passwords stored in browsers.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1094",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 credential stealer ZUMKONG emails credentials from the victim using HTTP POST requests.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1005",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has collected data from victims' local systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1487",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has access to destructive malware that is capable of overwriting a machine's Master Boot Record (MBR).[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used strategic web compromises, particularly of South Korean websites, to distribute malware. The group has also used torrent file-sharing sites to more indiscriminately disseminate malware to victims. As part of their compromises, the group has used a Javascript based profiler called RICECURRY to profile a victim's web browser and deliver malicious code accordingly.[2][1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1173",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used Windows DDE for execution of commands and a malicious VBS.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1106",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 leverages the Windows API calls: VirtualAlloc(), WriteProcessMemory(), and CreateRemoteThread() for process injection.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used Flash Player (CVE-2016-4117, CVE-2018-4878) and Word (CVE-2017-0199) exploits for execution.[2][1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 sends images to users that are embedded with shellcode. The group also obfuscates strings and payloads, including through the use of steganography.[3][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1120",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has a Bluetooth device harvester, which uses Windows Bluetooth APIs to find information on connected Bluetooth devices.[6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1057",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT37's Freenki malware lists running processes using the Microsoft Windows API.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 injects its malware variant, ROKRAT, into the cmd.exe process.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 injects its malware variant, ROKRAT, into the cmd.exe process.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT37's has added persistence via the Registry key HKCU\\Software\\Microsoft\\CurrentVersion\\Run\\.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has downloaded second stage malware from compromised websites.[1][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has downloaded second stage malware from compromised websites.[1][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 executes shellcode and a script to decode Base64 strings.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 executes shellcode and a script to decode Base64 strings.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 delivers malware using spearphishing emails with malicious HWP attachments.[1][3][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 uses HTTPS to conceal C2 communications.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 collects the computer name, the BIOS model, and execution path.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 identifies the victim username.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1529",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has used malware that will issue the command shutdown /r /t 1 to reboot a system after wiping its MBR.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 has sent spearphishing attachments attempting to get a user to open them.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 leverages social networking sites and cloud platforms (AOL, Twitter, Yandex, Mediafire, pCloud, Dropbox, and Box) for C2.[1][3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT37 leverages social networking sites and cloud platforms (AOL, Twitter, Yandex, Mediafire, pCloud, Dropbox, and Box) for C2.[1][3]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT37"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

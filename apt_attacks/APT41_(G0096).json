@@ -1,0 +1,516 @@
+{
+	"name": "APT41 (G0096)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT41, ATT&CK group G0096 v1.0",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1015",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 leveraged sticky keys to establish persistence. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1015",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 leveraged sticky keys to establish persistence. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1067",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 deployed Master Boot Record bootkits on Windows systems to hide their malware and maintain persistence on victim systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 performed password brute-force attacks on the local admin account.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1146",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 attempted to remove evidence of some of its activity by deleting Bash histories.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1116",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 leveraged code-signing certificates to sign malware when targeting both gaming and non-gaming organizations.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used cmd.exe /c to execute commands on remote machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1223",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compiled HTML (.chm) files for targeting. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1223",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compiled HTML (.chm) files for targeting. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a tool called CLASSFON to covertly proxy network communications.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a tool called CLASSFON to covertly proxy network communications.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 created user accounts and adds them to the User and Admin groups. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used the Windows Credential Editor to dump password hashes from memory and authenticate other user accounts.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 created a RAR archive of targeted files for exfiltration.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1486",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a ransomware called Encryptor RaaS to encrypt files on the targeted systems and provide a ransom note to the user.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used legitimate executables to perform DLL side-loading of their malware. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1483",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used DGA to change their C2 servers monthly.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 leveraged the follow exploits in their operations: CVE-2012-0158, CVE-2015-1641, CVE-2017-0199, CVE-2017-11882, and CVE-2019-3396. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 compromised an online billing/payment service using VPN access between a third-party service provider and the targeted payment service.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1133",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 compromised an online billing/payment service using VPN access between a third-party service provider and the targeted payment service.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1008",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used the Steam community page as a fallback mechanism for C2. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 deleted files from the system. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 attempted to remove evidence of some of its activity by clearing Windows security and system events.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a keylogger called GEARSHIFT on a target system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a keylogger called GEARSHIFT on a target system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 attempted to masquerade their files as popular anti-virus software.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1031",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 modified legitimate Windows services to install malware backdoors.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a malware variant called GOODLUCK to modify the registry in order to steal credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a malware variant called WIDETONE to conduct port scans on the specified subnets.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1135",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used the net share command as part of network reconnaissance.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 leveraged PowerShell to deploy malware families in victims’ environments.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 malware TIDYELF loaded the main WINTERLOVE component by injecting it into the iexplore.exe process.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1055",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 malware TIDYELF loaded the main WINTERLOVE component by injecting it into the iexplore.exe process.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 created and modified startup files for persistence. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1076",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used RDP for lateral movement.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1496",
+			"tactic": "impact",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 deployed a Monero cryptocurrency mining tool in a victim’s environment.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1014",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 deployed rootkits on Linux systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a compromised account to create a scheduled task on a system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a compromised account to create a scheduled task on a system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used a compromised account to create a scheduled task on a system.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 sent spearphishing emails with attachments such as compiled HTML (.chm) files to initially compromise their victims.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used DNS for C2 communications. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1195",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 gained access to production environments where they could inject malicious code into legitimate, signed files and widely distribute them to end users.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 collected MAC addresses from victim machines. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used the netstat command as part of network reconnaissance. The group has also used a malware variant, HIGHNOON, to enumerate active RDP sessions. [1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used the WMIEXEC utility to execute whoami commands on remote machines.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compromised credentials to log on to other systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compromised credentials to log on to other systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compromised credentials to log on to other systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used compromised credentials to log on to other systems.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used legitimate websites for C2 through dead drop resolvers (DDR), including GitHub, Pastebin, and Microsoft TechNet.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1102",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used legitimate websites for C2 through dead drop resolvers (DDR), including GitHub, Pastebin, and Microsoft TechNet.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT41 used WMI in several ways, including for execution of commands via WMIEXEC as well as for persistence via PowerSploit.[1]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT41"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}

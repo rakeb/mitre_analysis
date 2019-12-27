@@ -1,0 +1,651 @@
+{
+	"name": "APT32 (G0050)",
+	"version": "2.2",
+	"domain": "mitre-enterprise",
+	"description": "Enterprise techniques used by APT32, ATT&CK group G0050 v2.1",
+	"filters": {
+		"stages": [
+			"act"
+		],
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS"
+		]
+	},
+	"sorting": 0,
+	"viewMode": 0,
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1087",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 enumerated administrative users and DC servers using the commands net localgroup administrators and net group \"Domain Controllers\" /domain.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1017",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 compromised McAfee ePO to move laterally by distributing malware as a software deployment task.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1009",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 includes garbage code to mislead anti-malware software and researchers.[3][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used cmd.exe for execution. [4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1043",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used port 80 for C2 communications.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used Mimikatz, GetPassword_x64, and  customized versions of Windows Credential Dumper, HookChangePassword, and Outlook Credential Dumper to harvest credentials.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1094",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 uses Cobalt Strike's malleable C2 functionality to blend in with network traffic. The group's backdoor can also exfiltrate data by encoding it in the subdomain field of DNS packets. Additionally, one of the group's macOS backdoors implements a specific format for the C2 packet involving random values.[1][11][4][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1002",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor has used LZMA compression before exfiltration.    [5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1022",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 backdoors have encrypted data before exfiltration, including by using RC4 encryption.[5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1073",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 ran legitimately-signed executables from Symantec and McAfee which load a malicious DLL. The group also side-loads its backdoor by dropping a library and a legitimate, signed executable (AcroTranscoder).[6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has infected victims by tricking them into visiting compromised watering hole websites.[3]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1041",
+			"tactic": "exfiltration",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor has exfiltrated data using the already opened channel with its C&amp;C server.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1203",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used RTF document that includes an exploit to execute malicious code. (CVE-2017-11882)[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1068",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used CVE-2016-7255 to escalate privileges.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1083",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor possesses the capability to list files and directories on a machine.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1222",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's macOS backdoor changes the permission of the file it wants to execute to 755.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1107",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's macOS backdoor can receive a \"delete\" command.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1158",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's macOS backdoor hides the clientID file via a chflags function.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1158",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's macOS backdoor hides the clientID file via a chflags function.[7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1143",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used the WindowStyle parameter to conceal PowerShell windows.[1][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1070",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has cleared select event log entries.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used hidden or non-printing characters to help masquerade file names on a system, such as appending a Unicode no-break space character to a legitimate service name. They have also used by moving and renaming pubprn.vbs to a .txt file to avoid detection. Additionally, the group has renamed a NetCat binary to kb-10233.exe to masquerade as a Windows update.[1][10][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1031",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 modified Windows Services to ensure PowerShell scripts were loaded on the system.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1112",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor has modified the Windows Registry to store the backdoor's configuration.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1170",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used mshta.exe for code execution.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1170",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used mshta.exe for code execution.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 performed network scanning on the network to search for open ports, services, OS finger-printing, and other vulnerabilities.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 creates a Windows service to establish persistence.[3][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1050",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 creates a Windows service to establish persistence.[3][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1096",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used NTFS alternate data stream to hide their payloads.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 uses the Invoke-Obfuscation framework to obfuscate their PowerShell and also performs other code obfuscation. APT32 has also encoded payloads using Base64 and a framework called \"Dont-Kill-My-Cat (DKMC). APT32 also encrypts the library used for network exfiltration with AES-256 in CBC mode in their macOS backdoor.[1][8][3][6][4][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1137",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 installed a backdoor macro in Microsoft Outlook for persistence.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1075",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used pass the hash for lateral movement.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1097",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 successfully gained remote access by using pass the ticket.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1086",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used PowerShell-based tools, PowerShell one-liners, and shellcode loaders for execution.[1][6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1012",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor can query the Windows Registry to gather system information.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1060",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 established persistence using Registry Run keys, both to execute PowerShell and VBS scripts as well as to execute their backdoor directly.[6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1117",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 created a Scheduled Task that used regsvr32.exe to execute a COM scriptlet that dynamically downloaded a backdoor and injected it into memory. The group has also used regsvr32 to run their backdoor.[1][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1117",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 created a Scheduled Task that used regsvr32.exe to execute a COM scriptlet that dynamically downloaded a backdoor and injected it into memory. The group has also used regsvr32 to run their backdoor.[1][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has added JavaScript to victim websites to download additional frameworks that profile and compromise website visitors.[2][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has added JavaScript to victim websites to download additional frameworks that profile and compromise website visitors.[2][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1018",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used the net view command to show all shares available, including the administrative shares such as C$ and ADMIN$. APT32 also used the ping command.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used scheduled tasks to persist on victim systems.[1][6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used scheduled tasks to persist on victim systems.[1][6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used scheduled tasks to persist on victim systems.[1][6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used macros, PowerShell scripts, COM scriptlets, and VBS scripts.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1064",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used macros, PowerShell scripts, COM scriptlets, and VBS scripts.[6][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1035",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32's backdoor has used Windows services as a way to execute its malicious payload.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1216",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used PubPrn.vbs within execution scripts to execute malware, possibly bypassing defenses.[9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1216",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used PubPrn.vbs within execution scripts to execute malware, possibly bypassing defenses.[9]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1193",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has sent spearphishing emails with a malicious executable disguised as a document or spreadsheet.[3][6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1192",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has sent spearphishing emails containing malicious links.[3][6]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used JavaScript that communicates over HTTP or HTTPS to attacker controlled domains to download additional frameworks. The group has also used email for C2 via an Office macro. The group's backdoor can also exfiltrate data by encoding it in the subdomain field of DNS packets.[2][6][4][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1082",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has collected the OS version and computer name from victims. One of the group's backdoors can also query the Windows Registry to gather system information, and another macOS backdoor performs a fingerprint of the machine on its first connection to the C&amp;C server.[3][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1016",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used the ipconfig /all command to gather the IP address from the system.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1049",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used the netstat -anpo tcp command to display TCP connections on the victim's machine.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1033",
+			"tactic": "discovery",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 collected the victim's username and executed the whoami command on the victim's machine.[3][4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1099",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used scheduled task raw XML with a backdated timestamp of June 2, 2016. The group has also set the creation time of the files dropped by the second stage of the exploit to match the creation time of kernel32.dll. Additionally, APT32 has used a random value to modify the timestamp of the file storing the clientID.[1][5][7]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1065",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 backdoor can use HTTP over an uncommon TCP port (e.g 14146) which is specified in the backdoor configuration.[5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has attempted to lure users to execute a malicious dropper delivered via a spearphishing attachment.[3][6][5]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used legitimate local admin account credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used legitimate local admin account credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used legitimate local admin account credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used legitimate local admin account credentials.[1]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used Web shells to maintain access to victim websites.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1100",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 has used Web shells to maintain access to victim websites.[2]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1077",
+			"tactic": "lateral-movement",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used Net to use Windows' hidden network shares to copy their tools to remote machines for execution.[4]",
+			"enabled": true,
+			"metadata": []
+		},
+		{
+			"techniqueID": "T1047",
+			"tactic": "execution",
+			"score": 1,
+			"color": "",
+			"comment": "APT32 used WMI to deploy their tools on remote machines and to gather information about the Outlook process.[4]",
+			"enabled": true,
+			"metadata": []
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffff",
+			"#66b1ff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT32"
+		}
+	],
+	"metadata": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true
+}
